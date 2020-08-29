@@ -1,8 +1,8 @@
 from django.shortcuts import render
-fr
+
 
 
 # Create your views here.
 
-def home(requests):
-    return render()
+def home(request):
+    return render(request, 'index.html')
