@@ -199,7 +199,8 @@ a.simpleCart_empty {
 }
 
 .microphone {
-    background: #ff5063;
+	background: #ff5063;
+	/* background: #03a9f4; */
     border: none;
     -o-border-radius: 7%;
     -ms-border-radius: 7%;
@@ -1135,7 +1136,10 @@ ul.wmuSliderPagination {
 /*-- banner-bottom1 --*/
 .agileinfo_banner_bottom1_grid_left{
 	background:url(../images/44.jpg) no-repeat 0px 0px;
-	background-size:cover;
+	background:url('../images/camera-sale.jpg') no-repeat 0px 0px;
+
+	background-size:contain;
+	opacity: 0.8;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
 	-o-background-size:cover;
@@ -1171,15 +1175,17 @@ ul.wmuSliderPagination {
     font-size: 1em;
     letter-spacing: 2px;
     color: #ff5063;
-    background: url(../images/img-sp.png) no-repeat 112px -4px;
+    /* background: url(../images/img-sp.png) no-repeat 112px -4px; */
     padding: 0 45px 0 0;
 }
 .agileinfo_banner_bottom1_grid_left a:hover,.team-bottom a:hover{
 	color:#212121;
-	background:url(../images/img-sp.png) no-repeat 112px -38px;
+	/* background:url(../images/img-sp.png) no-repeat 112px -38px; */
 }
 .agileinfo_banner_bottom1_grid_right{
-	background:url(../images/45.jpg) no-repeat 0px 0px;
+	/* background:url(../images/45.jpg) no-repeat 0px 0px; */
+	background:url('../images/laptops-sale.jpg') no-repeat 0px 0px;
+
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
