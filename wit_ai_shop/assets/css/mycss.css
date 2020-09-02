@@ -139,4 +139,24 @@
 }
 
 
+#profile_icons li {
+    padding: 10px;
+    font-size: 25px;
+}
 
+#profile_icons li i {
+    font-size: inherit;
+    color: cadetblue;
+}
+
+#profile_icons li i:hover {
+    color: teal;
+}
+
+.w3view-cart:hover {
+	background: #be3646;
+}
+
+.microphone:hover {
+	background: #be3646;
+}
