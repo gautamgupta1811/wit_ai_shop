@@ -1,6 +1,6 @@
 import requests
 import json
-from Recorder import record_audio, read_audio
+from wit_files.Recorder import record_audio, read_audio
 
 # Wit speech API endpoint
 API_ENDPOINT = 'https://api.wit.ai/speech'
