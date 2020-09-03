@@ -214,7 +214,7 @@ a.simpleCart_empty {
     position: fixed;
 	right: 8%;
 	top: 6%;
-	z-index: 999
+	z-index: 999;
 }
 .microphone i.fa {
     font-size: 1.8em;

@@ -20,6 +20,7 @@
 <link href="{% static 'css/popuo-box.css' %}" rel="stylesheet" type="text/css" media="all" />
 <link href="{% static 'css/mycss.css' %}" rel="stylesheet" type="text/css" media="all" />
 
+<script src="{% static 'js/myjs.js' %}"></script>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -67,10 +68,13 @@
 					<input type="hidden" name="display" value="1" />
 					<button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
 				</form>   
-			</div> 
-			<button class="microphone"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+			</div>
+			<form action="#" id="mic_form">
+				<button class="microphone"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+			</form>
 		</div>
 	</div>
+
 	<!-- //header -->
 	<!-- navigation -->
 	
@@ -103,281 +107,344 @@
 		<div class="container">
 			<div class="card text-center">
 				<div class="card-header">
-				  <ul class="nav nav-tabs card-header-tabs">
-					<li class="nav-item" role="presentation">
-					  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#mobiles" role="tab" aria-controls="home" aria-selected="true">Mobiles</a>
-					</li>
-					<li class="nav-item" role="presentation">
-					  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#laptops" role="tab" aria-controls="profile" aria-selected="false">Laptops</a>
-					</li>
-					<li class="nav-item" role="presentation">
-						<a class="nav-link" id="contact-tab" data-toggle="tab" href="#cameras" role="tab" aria-controls="contact" aria-selected="false">Cameras</a>
-					  </li>
-				  </ul>
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item" role="presentation">
+						  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+						</li>
+						<li class="nav-item" role="presentation">
+						  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+						</li>
+						<li class="nav-item" role="presentation">
+						  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+						</li>
+					  </ul>
 				</div>
 				<div class="card-body">
 					<div class="tab-content" id="myTabContent">
-						<div class="tab-pane fade show active" id="mobiles" role="tabpanel" aria-labelledby="home-tab">
-							<section id="sec5">
-								<div class="container">
-									<div class="items_card">
-										<ul>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
+						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+							<div class="container">
+								<div class="agileinfo_new_products_grids">
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/25.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
 												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
-												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
-												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
-												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-										</ul>
+											</div>
+											<h5><a href="single.html">Laptops</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$520</span> <i class="item_price">$500</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Red Laptop"> 
+													<input type="hidden" name="amount" value="500.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>
+										</div>
 									</div>
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/27.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5><a href="single.html">Black Phone</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$380</span> <i class="item_price">$370</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Black Phone"> 
+													<input type="hidden" name="amount" value="370.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/34.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal5"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5><a href="single.html">Kids Toy</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$150</span> <i class="item_price">$100</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Kids Toy"> 
+													<input type="hidden" name="amount" value="100.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>  
+										</div>
+									</div>
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/37.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal6"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5><a href="single.html">Induction Stove</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$280</span> <i class="item_price">$250</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Induction Stove"> 
+													<input type="hidden" name="amount" value="250.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix"> </div>
 								</div>
-							</section>
+							</div>
 						</div>
-						<div class="tab-pane fade" id="laptops" role="tabpanel" aria-labelledby="profile-tab">
-							<section id="sec5">
-								<div class="container">
-									<div class="items_card">
-										<ul>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
+						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+							<div class="container">
+								<div class="agileinfo_new_products_grids">
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/25.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
 												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
-												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
-												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
-												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-										</ul>
+											</div>
+											<h5><a href="single.html">Laptops</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$520</span> <i class="item_price">$500</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Red Laptop"> 
+													<input type="hidden" name="amount" value="500.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>
+										</div>
 									</div>
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/27.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5><a href="single.html">Black Phone</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$380</span> <i class="item_price">$370</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Black Phone"> 
+													<input type="hidden" name="amount" value="370.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/34.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal5"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5><a href="single.html">Kids Toy</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$150</span> <i class="item_price">$100</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Kids Toy"> 
+													<input type="hidden" name="amount" value="100.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>  
+										</div>
+									</div>
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/37.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal6"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5><a href="single.html">Induction Stove</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$280</span> <i class="item_price">$250</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Induction Stove"> 
+													<input type="hidden" name="amount" value="250.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix"> </div>
 								</div>
-							</section>
+							</div>
 						</div>
-						<div class="tab-pane fade" id="cameras" role="tabpanel" aria-labelledby="contact-tab">
-							<section id="sec5">
-								<div class="container">
-									<div class="items_card">
-										<ul>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
+						<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+							<div class="container">
+								<div class="agileinfo_new_products_grids">
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/25.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
 												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
-												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
-												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-											<li>
-												<div class="product">
-													<a class="img" href="#">
-														<img src="https://demo.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/143933984/web/images/m1.jpg" alt="">
-													</a>
-													<a class="new" href="#">New</a>
-													<a class="quick-view" href="#" data-toggle="modal" data-target="#myModal">
-														<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-													</a>
-												</div>
-												<div class="item-info">
-													<h4><a href="#">Formal Blue Shirt</a></h4>
-													<p>
-														<span class="price">$45.99</span>
-														<del>$69.71</del>
-													</p>
-													<a class="border-anim" href="#">Add to Cart</a>
-												</div>
-											</li>
-										</ul>
+											</div>
+											<h5><a href="single.html">Laptops</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$520</span> <i class="item_price">$500</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Red Laptop"> 
+													<input type="hidden" name="amount" value="500.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>
+										</div>
 									</div>
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/27.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5><a href="single.html">Black Phone</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$380</span> <i class="item_price">$370</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Black Phone"> 
+													<input type="hidden" name="amount" value="370.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/34.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal5"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5><a href="single.html">Kids Toy</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$150</span> <i class="item_price">$100</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Kids Toy"> 
+													<input type="hidden" name="amount" value="100.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>  
+										</div>
+									</div>
+									<div class="col-md-3 agileinfo_new_products_grid">
+										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+											<div class="hs-wrapper hs-wrapper1">
+												<img src="{% static 'images/37.jpg' %}" alt=" " class="img-responsive" />
+												<div class="w3_hs_bottom w3_hs_bottom_sub">
+													<ul>
+														<li>
+															<a href="#" data-toggle="modal" data-target="#myModal6"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<h5><a href="single.html">Induction Stove</a></h5>
+											<div class="simpleCart_shelfItem">
+												<p><span>$280</span> <i class="item_price">$250</i></p>
+												<form action="#" method="post">
+													<input type="hidden" name="cmd" value="_cart">
+													<input type="hidden" name="add" value="1"> 
+													<input type="hidden" name="w3ls_item" value="Induction Stove"> 
+													<input type="hidden" name="amount" value="250.00">   
+													<button type="submit" class="w3ls-cart">Add to cart</button>
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix"> </div>
 								</div>
-							</section>
+							</div>
 						</div>
 					</div>
 				</div>
-			  </div>
+			</div>
 		</div>
 	</div>
 	<!-- //banner-bottom -->
