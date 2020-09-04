@@ -38,6 +38,8 @@
 <link href='//fonts.googleapis.com/css?family=Glegoo:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 <!-- //web fonts -->  
+
+
 <!-- start-smooth-scrolling -->
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
@@ -48,6 +50,14 @@
 	});
 </script>
 <!-- //end-smooth-scrolling --> 
+
+<style>
+	.cam-show img, #myModal9 img, #myModal10 img, #myModal11 img, #myModal12 img {
+		height: 100% !important;
+	}
+	
+</style>
+
 </head> 
 <body>
 	<!-- for bootstrap working -->
@@ -72,8 +82,7 @@
 			<form action="#" id="mic_form">
 				<button class="microphone" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
 			</form>
-			<form action="mic" id="mic_form" method="post">
-				{% csrf_token %}
+			<form action="mic" id="mic_form">
 				<button class="microphone" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
 			</form>
 		</div>
@@ -108,19 +117,19 @@
 	</div>
 	<!-- //banner --> 
 	<!-- banner-bottom -->
-	<div class="banner-bottom">
+	<!-- <div class="banner-bottom">
 		<div class="container">
 			<div class="card text-center">
 				<div class="card-header">
 					<ul class="nav nav-tabs" id="myTab" role="tablist">
 						<li class="nav-item" role="presentation">
-						  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+						  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mobiles</a>
 						</li>
 						<li class="nav-item" role="presentation">
-						  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+						  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Laptops</a>
 						</li>
 						<li class="nav-item" role="presentation">
-						  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+						  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Cameras</a>
 						</li>
 					  </ul>
 				</div>
@@ -451,51 +460,259 @@
 				</div>
 			</div>
 		</div>
+	</div> -->
+
+
+	<div class="mob-show new-products">
+		<div class="container">
+			<h3>Mobiles</h3>
+			<div class="row">
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m1.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">Oppo A9</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$300</span> <i class="item_price">$250</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Oppo A9"> 
+								<input type="hidden" name="amount" value="250.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal1">View</a>
+						</div>
+					  </div>
+				</div>
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m16.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">Apple iPhone 11 Pro</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$1500</span> <i class="item_price">$1400</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Apple iPhone 11 Pro"> 
+								<input type="hidden" name="amount" value="1400.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal2">View</a>
+						</div>
+					  </div>
+				</div>
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m27.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">OnePlus 7T</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$520</span> <i class="item_price">$500</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="OnePlus 7T"> 
+								<input type="hidden" name="amount" value="500.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal3">View</a>
+						</div>
+					  </div>
+				</div>
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m28.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">Samsung Note10</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$570</span> <i class="item_price">$550</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Samsung Note10"> 
+								<input type="hidden" name="amount" value="550.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal4">View</a>
+						</div>
+					  </div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-- //banner-bottom -->
 
 
 	<!-- modal-video -->
-	<div class="modal video-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal">
+	<div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
 				</div>
 				<section>
 					<div class="modal-body">
 						<div class="col-md-5 modal_body_left">
-							<img src="{% static 'images/3.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m1.jpg' %}" alt=" " class="img-responsive" />
 						</div>
 						<div class="col-md-7 modal_body_right">
-							<h4>The Best Mobile Phone 3GB</h4>
-							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
-								commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-							<div class="rating">
-								<div class="rating-left">
-									<img src="{% static 'images/star-.png' %}" alt=" " class="img-responsive" />
-								</div>
-								<div class="rating-left">
-									<img src="{% static 'images/star-.png' %}" alt=" " class="img-responsive" />
-								</div>
-								<div class="rating-left">
-									<img src="{% static 'images/star-.png' %}" alt=" " class="img-responsive" />
-								</div>
-								<div class="rating-left">
-									<img src="{% static 'images/star.png' %}" alt=" " class="img-responsive" />
-								</div>
-								<div class="rating-left">
-									<img src="{% static 'images/star.png' %}" alt=" " class="img-responsive" />
-								</div>
-								<div class="clearfix"> </div>
-							</div>
+							<h4>Oppo A9</h4>
+							<p class="mb-1">48MP+8MP+2MP+2MP Quad camera with 119degree ultra wide, ultra night mode, video EIS anti-shake, portrait camera | 16MP AI front camera</p>
+							<p>16.5 centimeters (6.5-inch) with 1600 x 720 pixels resolution HD+ waterdrop screen with corning Gorilla 3+ screen. Sunlight screen and night shield with blue light filter</p>
 							<div class="modal_body_right_cart simpleCart_shelfItem">
-								<p><span>$380</span> <i class="item_price">$350</i></p>
+								<p><span>$300</span> <i class="item_price">$250</i></p>
 								<form action="#" method="post">
 									<input type="hidden" name="cmd" value="_cart">
 									<input type="hidden" name="add" value="1"> 
-									<input type="hidden" name="w3ls_item" value="Mobile Phone1"> 
-									<input type="hidden" name="amount" value="350.00">   
+									<input type="hidden" name="w3ls_item" value="Oppo A9"> 
+									<input type="hidden" name="amount" value="250.00">   
+									<button type="submit" class="w3ls-cart">Add to cart</button>
+								</form>
+							</div>
+							<h5>Color</h5>
+							<div class="color-quality">
+								<ul>
+									<li><a href="#"><span></span></a></li>
+									<li><a href="#" class="brown"><span></span></a></li>
+									<li><a href="#" class="purple"><span></span></a></li>
+									<li><a href="#" class="gray"><span></span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal video-modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<img src="{% static 'wit_images/m16.jpg' %}" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4>Apple iPhone 11 Pro</h4>
+							<p class="mb-1">Triple-camera system with 12MP Ultra Wide, Wide, and Telephoto cameras; Night mode, Portrait mode, and 4K video up to 60fps</p>
+							<p>5.8-inch (14.7 cm) Super Retina XDR OLED display</p>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$1500</span> <i class="item_price">$1400</i></p>
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1"> 
+									<input type="hidden" name="w3ls_item" value="Apple iPhone 11 Pro"> 
+									<input type="hidden" name="amount" value="1400.00">   
+									<button type="submit" class="w3ls-cart">Add to cart</button>
+								</form>
+							</div>
+							<h5>Color</h5>
+							<div class="color-quality">
+								<ul>
+									<li><a href="#"><span></span></a></li>
+									<li><a href="#" class="brown"><span></span></a></li>
+									<li><a href="#" class="purple"><span></span></a></li>
+									<li><a href="#" class="gray"><span></span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal video-modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<img src="{% static 'wit_images/m27.jpg' %}" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4>OnePlus 7T</h4>
+							<p class="mb-1">48+12+16MP triple rear camera with telephoto lens + ultrawide angle lens | 16MP front camera with 4K video capture @ 30/60 FPS, pro mode, panorama, HDR, AI scene detection, RAW image</p>
+							<p>Oxygen OS based on Android v10 operating system with 2.96GHz Qualcomm Snapdragon 855 Plus AI Engine octa-core, 7nm processor, Adreno 640</p>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$520</span> <i class="item_price">$500</i></p>
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1"> 
+									<input type="hidden" name="w3ls_item" value="OnePlus 7T"> 
+									<input type="hidden" name="amount" value="500.00">   
+									<button type="submit" class="w3ls-cart">Add to cart</button>
+								</form>
+							</div>
+							<h5>Color</h5>
+							<div class="color-quality">
+								<ul>
+									<li><a href="#"><span></span></a></li>
+									<li><a href="#" class="brown"><span></span></a></li>
+									<li><a href="#" class="purple"><span></span></a></li>
+									<li><a href="#" class="gray"><span></span></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal video-modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<img src="{% static 'wit_images/m28.jpg' %}" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4>Samsung Note10</h4>
+							<p class="mb-1">Memory, Storage & SIM: 8GB RAM | 128GB internal memory expandable up to 1TB | Dual SIM dual-standby (4G+4G)</p>
+							<p>12MP Ultra wide (123°) FF + F2.2 " Wide (77°) 12MP AF F1.7 Dual Pixel + Tele (45°) 12MP AF F2.4 OIS, 2x Zoom camera | 32MP front facing camera</p>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$570</span> <i class="item_price">$550</i></p>
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1"> 
+									<input type="hidden" name="w3ls_item" value="Samsung Note10"> 
+									<input type="hidden" name="amount" value="550.00">   
 									<button type="submit" class="w3ls-cart">Add to cart</button>
 								</form>
 							</div>
@@ -516,6 +733,480 @@
 		</div>
 	</div>
 	<!-- //modal-video -->
+
+
+	<div class="lap-show new-products">
+		<div class="container">
+			<h3>Laptops</h3>
+			<div class="row">
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m6.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">Dell G3 3500</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$2000</span> <i class="item_price">$1080</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Dell G3 3500"> 
+								<input type="hidden" name="amount" value="1080.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal5">View</a>
+						</div>
+					  </div>
+				</div>
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m22.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">Lenovo Ideapad</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$520</span> <i class="item_price">$500</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Lenovo Ideapad"> 
+								<input type="hidden" name="amount" value="500.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal6">View</a>
+						</div>
+					  </div>
+				</div>
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m23.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">HP Notebook G7</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$720</span> <i class="item_price">$700</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="HP Notebook G7"> 
+								<input type="hidden" name="amount" value="700.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal7">View</a>
+						</div>
+					  </div>
+				</div>
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m21.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">Alienware m15(R3)</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$2800</span> <i class="item_price">$2700</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Alienware m15(R3)"> 
+								<input type="hidden" name="amount" value="2700.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal8">View</a>
+						</div>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- modal-video -->
+	<div class="modal video-modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<img src="{% static 'wit_images/m6.jpg' %}" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4>Dell G3 3500</h4>
+							<p class="mb-1">Display:15.6 LED Backlit Anti Glare IPS FHD (1920 x 1080) display ,60Hz ,300 nits | 72% NTSC Color Gamut</p>
+							<p>Graphics:NVIDIA GeForce GTX 1650 Ti 4GB GDDR6 | Game Shift Technology. Operating System & Software:Windows 10 Home Plus Single Language | McAfee Security Center 15 month subscription</p>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$2000</span> <i class="item_price">$1080</i></p>
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1"> 
+									<input type="hidden" name="w3ls_item" value="Dell G3 3500"> 
+									<input type="hidden" name="amount" value="1080.00">   
+									<button type="submit" class="w3ls-cart">Add to cart</button>
+								</form>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal video-modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<img src="{% static 'wit_images/m22.jpg' %}" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4>Lenovo Ideapad</h4>
+							<p class="mb-1">Processor: 10th Gen Intel Core i3-1005G1 processor, 1.2 Ghz base speed, 3.4 Ghz max speed, 2 Cores, 4Mb Smart Cache</p>
+							<p>Display: 15.6-inch screen with (1920X1080) full HD display , Anti Glare technology Memory and storage: 4 GB RAM | Storage: 1 TB HDD</p>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$520</span> <i class="item_price">$500</i></p>
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1"> 
+									<input type="hidden" name="w3ls_item" value="Lenovo Ideapad"> 
+									<input type="hidden" name="amount" value="500.00">   
+									<button type="submit" class="w3ls-cart">Add to cart</button>
+								</form>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal video-modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<img src="{% static 'wit_images/m23.jpg' %}" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4>HP Notebook G7</h4>
+							<p class="mb-1">2GHz AMD R5-2500U processor. 8GB DDR4 RAM</p>
+							<p>1TB 5400rpm hard drive. 14-inch screen, AMD Radeon Vega Graphics</p>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$720</span> <i class="item_price">$700</i></p>
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1"> 
+									<input type="hidden" name="w3ls_item" value="HP Notebook G7"> 
+									<input type="hidden" name="amount" value="700.00">   
+									<button type="submit" class="w3ls-cart">Add to cart</button>
+								</form>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal video-modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<img src="{% static 'wit_images/m21.jpg' %}" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4>Alienware m15(R3)</h4>
+							<p class="mb-1">Processor:10th Gen Intel Ci7-10750H Processor(12MB Cache, up to 5.1 GHz, 6 cores)</p>
+							<p>Display:15.6" FHD (1920 x 1080) 300Hz 3ms 300-nits 100% sRGB color gamut" Graphics: NVIDIA GeForce GTX 1660 Ti 6GB GDDR6</p>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$2800</span> <i class="item_price">$2700</i></p>
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1"> 
+									<input type="hidden" name="w3ls_item" value="Alienware m15(R3)"> 
+									<input type="hidden" name="amount" value="2700.00">   
+									<button type="submit" class="w3ls-cart">Add to cart</button>
+								</form>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<!-- //modal-video -->
+
+	<div class="cam-show new-products">
+		<div class="container">
+			<h3>Cameras</h3>
+			<div class="row">
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m26.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">Sony ILCE5100L</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$520</span> <i class="item_price">$500</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Sony ILCE5100L"> 
+								<input type="hidden" name="amount" value="500.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal9">View</a>
+						</div>
+					  </div>
+				</div>
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m24.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">Nikon D5300</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$570</span> <i class="item_price">$550</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Nikon D5300"> 
+								<input type="hidden" name="amount" value="550.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal10">View</a>
+						</div>
+					  </div>
+				</div>
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m25.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">Sony ILCE6000Y</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$780</span> <i class="item_price">$750</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Sony ILCE6000Y"> 
+								<input type="hidden" name="amount" value="750.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal11">View</a>
+						</div>
+					  </div>
+				</div>
+				<div class="col-3">
+					<div class="card" style="width: 16rem; border: none; background: #f3f3f3;">
+						<div class="card-img-hover">
+							<img src="{% static 'wit_images/m12.jpg' %}" class="card-img-top" alt="">
+						</div>
+						<div class="card-body" style="text-align: center; color: red; font-weight: 800; padding: 0.5rem;">
+						  <h5 class="card-title" style="margin-bottom: 0rem; margin-top: 0.5rem; font-size: 24px;">Sony DSC W830</h5>
+						</div>
+						<div class="simpleCart_shelfItem" style="text-align: center;">
+							<p><span>$110</span> <i class="item_price">$100</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Sony DSC W830"> 
+								<input type="hidden" name="amount" value="100.00">   
+								<button type="submit" class="w3ls-cart mb-3">Add to cart</button>
+							</form>
+						</div>
+						<div class="card-view">
+							<a href="#" data-toggle="modal" data-target="#myModal12">View</a>
+						</div>
+					  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- modal-video -->
+	<div class="modal video-modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<img src="{% static 'wit_images/m26.jpg' %}" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4>Sony ILCE5100L</h4>
+							<p class="mb-1">Sensor: APS-C CMOS Sensor with 24.3 MP (high resolution for large prints and image cropping). ISO: 100-25600 sensitivity range </p>
+							<p>Image Processor: BIONZ X with 179 autofocus points (important for speed and accuracy of autofocus and burst photography)</p>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$520</span> <i class="item_price">$500</i></p>
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1"> 
+									<input type="hidden" name="w3ls_item" value="Sony ILCE5100L"> 
+									<input type="hidden" name="amount" value="500.00">   
+									<button type="submit" class="w3ls-cart">Add to cart</button>
+								</form>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal video-modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<img src="{% static 'wit_images/m24.jpg' %}" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4>Nikon D5300</h4>
+							<p class="mb-1">24.2 effective megapixels. 23.5 x 15.6 mm DX format CMOS sensor</p>
+							<p>Comes with a 18-55mm VR kit lens, BF-1B body cap, BS-1 accessory shoe cover, DK-25 rubber eyecup</p>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$570</span> <i class="item_price">$550</i></p>
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1"> 
+									<input type="hidden" name="w3ls_item" value="Nikon D5300"> 
+									<input type="hidden" name="amount" value="550.00">   
+									<button type="submit" class="w3ls-cart">Add to cart</button>
+								</form>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal video-modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<img src="{% static 'wit_images/m25.jpg' %}" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4>Sony ILCE6000Y</h4>
+							<p class="mb-1">24.3 MP Exmor TM APS HD CMOS sensor. BIONZ X image processing engine</p>
+							<p>Shot speeds up to 60MB/s*, transfer speeds up to 150MB/s* and other factors. 1Mb=1, 000, 000 bytes. X = 150Kb/sec.</p>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$780</span> <i class="item_price">$750</i></p>
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1"> 
+									<input type="hidden" name="w3ls_item" value="Sony ILCE6000Y"> 
+									<input type="hidden" name="amount" value="750.00">   
+									<button type="submit" class="w3ls-cart">Add to cart</button>
+								</form>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal video-modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header" style="padding: 0;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				</div>
+				<section>
+					<div class="modal-body">
+						<div class="col-md-5 modal_body_left">
+							<img src="{% static 'wit_images/m12.jpg' %}" alt=" " class="img-responsive" />
+						</div>
+						<div class="col-md-7 modal_body_right">
+							<h4>Sony DSC W830</h4>
+							<p class="mb-1">Super HAD CCD sensor with 20.1 effective megapixels : Included Components - 1 U (Including-Rechargeable battery, AC Adaptor, Multi USB Cable, Wrist Strap,User Manual)</p>
+							<p>Equipped with sweep panorama, intelligent auto and picture effect, Self-Timer: Off , 10sec., 2sec., portrait1, portrait2</p>
+							<div class="modal_body_right_cart simpleCart_shelfItem">
+								<p><span>$110</span> <i class="item_price">$100</i></p>
+								<form action="#" method="post">
+									<input type="hidden" name="cmd" value="_cart">
+									<input type="hidden" name="add" value="1"> 
+									<input type="hidden" name="w3ls_item" value="Sony DSC W830"> 
+									<input type="hidden" name="amount" value="100.00">   
+									<button type="submit" class="w3ls-cart">Add to cart</button>
+								</form>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<!-- //modal-video -->
+
+
+	<!-- //banner-bottom -->
+
+
 	<!-- banner-bottom1 -->
 	<div class="banner-bottom1">
 		<div class="agileinfo_banner_bottom1_grids">
@@ -610,23 +1301,27 @@
 				<div class="col-md-3 agileinfo_new_products_grid">
 					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
 						<div class="hs-wrapper hs-wrapper1">
-							<img src="{% static 'images/25.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m1.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m2.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m3.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m4.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m5.jpg' %}" alt=" " class="img-responsive" /> 
 							<div class="w3_hs_bottom w3_hs_bottom_sub">
 								<ul>
 									<li>
-										<a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+										<a href="#" data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
 									</li>
 								</ul>
 							</div>
 						</div>
-						<h5><a href="single.html">Laptops</a></h5>
+						<h5><a href="#">Oppo A9</a></h5>
 						<div class="simpleCart_shelfItem">
-							<p><span>$520</span> <i class="item_price">$500</i></p>
+							<p><span>$300</span> <i class="item_price">$250</i></p>
 							<form action="#" method="post">
 								<input type="hidden" name="cmd" value="_cart">
 								<input type="hidden" name="add" value="1"> 
-								<input type="hidden" name="w3ls_item" value="Red Laptop"> 
-								<input type="hidden" name="amount" value="500.00">   
+								<input type="hidden" name="w3ls_item" value="Oppo A9"> 
+								<input type="hidden" name="amount" value="250">   
 								<button type="submit" class="w3ls-cart">Add to cart</button>
 							</form>
 						</div>
@@ -635,32 +1330,11 @@
 				<div class="col-md-3 agileinfo_new_products_grid">
 					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
 						<div class="hs-wrapper hs-wrapper1">
-							<img src="{% static 'images/27.jpg' %}" alt=" " class="img-responsive" />
-							<div class="w3_hs_bottom w3_hs_bottom_sub">
-								<ul>
-									<li>
-										<a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<h5><a href="single.html">Black Phone</a></h5>
-						<div class="simpleCart_shelfItem">
-							<p><span>$380</span> <i class="item_price">$370</i></p>
-							<form action="#" method="post">
-								<input type="hidden" name="cmd" value="_cart">
-								<input type="hidden" name="add" value="1"> 
-								<input type="hidden" name="w3ls_item" value="Black Phone"> 
-								<input type="hidden" name="amount" value="370.00">   
-								<button type="submit" class="w3ls-cart">Add to cart</button>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 agileinfo_new_products_grid">
-					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-						<div class="hs-wrapper hs-wrapper1">
-							<img src="{% static 'images/34.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m6.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m7.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m8.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m9.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m10.jpg' %}" alt=" " class="img-responsive" /> 
 							<div class="w3_hs_bottom w3_hs_bottom_sub">
 								<ul>
 									<li>
@@ -669,39 +1343,72 @@
 								</ul>
 							</div>
 						</div>
-						<h5><a href="single.html">Kids Toy</a></h5>
+						<h5><a href="#">Dell G3 3500</a></h5>
 						<div class="simpleCart_shelfItem">
-							<p><span>$150</span> <i class="item_price">$100</i></p>
+							<p><span>$2000</span> <i class="item_price">$1080</i></p>
 							<form action="#" method="post">
 								<input type="hidden" name="cmd" value="_cart">
 								<input type="hidden" name="add" value="1"> 
-								<input type="hidden" name="w3ls_item" value="Kids Toy"> 
-								<input type="hidden" name="amount" value="100.00">   
+								<input type="hidden" name="w3ls_item" value="Dell G3 3500"> 
+								<input type="hidden" name="amount" value="1080">   
 								<button type="submit" class="w3ls-cart">Add to cart</button>
 							</form>
-						</div>  
+						</div>
 					</div>
 				</div>
 				<div class="col-md-3 agileinfo_new_products_grid">
 					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
 						<div class="hs-wrapper hs-wrapper1">
-							<img src="{% static 'images/37.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m12.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m14.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m13.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m11.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m15.jpg' %}" alt=" " class="img-responsive" /> 
 							<div class="w3_hs_bottom w3_hs_bottom_sub">
 								<ul>
 									<li>
-										<a href="#" data-toggle="modal" data-target="#myModal6"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+										<a href="#" data-toggle="modal" data-target="#myModal12"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
 									</li>
 								</ul>
 							</div>
 						</div>
-						<h5><a href="single.html">Induction Stove</a></h5>
+						<h5><a href="#">Sony DSC W830</a></h5>
 						<div class="simpleCart_shelfItem">
-							<p><span>$280</span> <i class="item_price">$250</i></p>
+							<p><span>$110</span> <i class="item_price">$100</i></p>
 							<form action="#" method="post">
 								<input type="hidden" name="cmd" value="_cart">
 								<input type="hidden" name="add" value="1"> 
-								<input type="hidden" name="w3ls_item" value="Induction Stove"> 
-								<input type="hidden" name="amount" value="250.00">   
+								<input type="hidden" name="w3ls_item" value="Sony DSC W830"> 
+								<input type="hidden" name="amount" value="100">   
+								<button type="submit" class="w3ls-cart">Add to cart</button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 agileinfo_new_products_grid">
+					<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
+						<div class="hs-wrapper hs-wrapper1">
+							<img src="{% static 'wit_images/m16.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m17.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m18.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m19.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m20.jpg' %}" alt=" " class="img-responsive" /> 
+							<div class="w3_hs_bottom w3_hs_bottom_sub">
+								<ul>
+									<li>
+										<a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h5><a href="#">Apple iPhone 11 Pro</a></h5>
+						<div class="simpleCart_shelfItem">
+							<p><span>$1500</span> <i class="item_price">$1400</i></p>
+							<form action="#" method="post">
+								<input type="hidden" name="cmd" value="_cart">
+								<input type="hidden" name="add" value="1"> 
+								<input type="hidden" name="w3ls_item" value="Apple iPhone 11 Pro"> 
+								<input type="hidden" name="amount" value="1400">   
 								<button type="submit" class="w3ls-cart">Add to cart</button>
 							</form>
 						</div>
@@ -714,7 +1421,7 @@
 	<!-- //new-products -->
 
 	<!-- newsletter -->
-	<div class="newsletter">
+	<div class="newsletter" id="newsletter-scroll">
 		<div class="container">
 			<div class="col-md-6 w3agile_newsletter_left">
 				<h3>Newsletter</h3>
@@ -732,7 +1439,7 @@
 	<!-- //newsletter -->
 
 	<!-- footer -->
-	<div class="footer">
+	<div class="footer" id="footer-scroll">
 		<div class="container">
 			<div class="w3_footer_grids">
 				<div class="col-md-3 w3_footer_grid mr-5">
@@ -792,6 +1499,12 @@
 				<p>&copy; 2017 Electronic Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 			</div>
 		</div>
+
+		<!-- <div class="footer-copy-pos">
+			<a href="#profile-tab" class="scroll"><img src="{% static 'images/arrow.png' %}" alt=" " class="img-responsive" /></a>
+		</div> -->
+
+
 	</div>
 	<!-- //footer --> 
 	<!-- cart-js -->
@@ -809,8 +1522,22 @@
         		}
         	}
         });
-    </script>  
+    </script>
 	<!-- //cart-js -->   
+
+	<!-- Scroll-js -->
+
+	<script>
+		var data = JSON.parse("{{data|escapejs}}");
+		var id_scroll = data[id];
+		id_scroll.scrollIntoView();
+
+	</script>
+
+	<!-- End Scroll-js -->
+
+
+
 </body>
 </html>
 
