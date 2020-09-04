@@ -55,6 +55,16 @@
 	.cam-show img, #myModal9 img, #myModal10 img, #myModal11 img, #myModal12 img {
 		height: 100% !important;
 	}
+
+	.mic-rel {
+		position: relative;
+	}
+
+	.pop-up-mic {
+		position: absolute;
+		top: 15px;
+		left: 5%;
+	}
 	
 </style>
 
@@ -116,352 +126,6 @@
 		</div>
 	</div>
 	<!-- //banner --> 
-	<!-- banner-bottom -->
-	<!-- <div class="banner-bottom">
-		<div class="container">
-			<div class="card text-center">
-				<div class="card-header">
-					<ul class="nav nav-tabs" id="myTab" role="tablist">
-						<li class="nav-item" role="presentation">
-						  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mobiles</a>
-						</li>
-						<li class="nav-item" role="presentation">
-						  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Laptops</a>
-						</li>
-						<li class="nav-item" role="presentation">
-						  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Cameras</a>
-						</li>
-					  </ul>
-				</div>
-				<div class="card-body">
-					<div class="tab-content" id="myTabContent">
-						<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-							<div class="container">
-								<div class="agileinfo_new_products_grids">
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/25.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Laptops</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$520</span> <i class="item_price">$500</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Red Laptop"> 
-													<input type="hidden" name="amount" value="500.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/27.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Black Phone</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$380</span> <i class="item_price">$370</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Black Phone"> 
-													<input type="hidden" name="amount" value="370.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/34.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal5"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Kids Toy</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$150</span> <i class="item_price">$100</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Kids Toy"> 
-													<input type="hidden" name="amount" value="100.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>  
-										</div>
-									</div>
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/37.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal6"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Induction Stove</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$280</span> <i class="item_price">$250</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Induction Stove"> 
-													<input type="hidden" name="amount" value="250.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-							<div class="container">
-								<div class="agileinfo_new_products_grids">
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/25.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Laptops</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$520</span> <i class="item_price">$500</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Red Laptop"> 
-													<input type="hidden" name="amount" value="500.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/27.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Black Phone</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$380</span> <i class="item_price">$370</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Black Phone"> 
-													<input type="hidden" name="amount" value="370.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/34.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal5"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Kids Toy</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$150</span> <i class="item_price">$100</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Kids Toy"> 
-													<input type="hidden" name="amount" value="100.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>  
-										</div>
-									</div>
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/37.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal6"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Induction Stove</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$280</span> <i class="item_price">$250</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Induction Stove"> 
-													<input type="hidden" name="amount" value="250.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-							<div class="container">
-								<div class="agileinfo_new_products_grids">
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/25.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Laptops</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$520</span> <i class="item_price">$500</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Red Laptop"> 
-													<input type="hidden" name="amount" value="500.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/27.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Black Phone</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$380</span> <i class="item_price">$370</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Black Phone"> 
-													<input type="hidden" name="amount" value="370.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/34.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal5"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Kids Toy</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$150</span> <i class="item_price">$100</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Kids Toy"> 
-													<input type="hidden" name="amount" value="100.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>  
-										</div>
-									</div>
-									<div class="col-md-3 agileinfo_new_products_grid">
-										<div class="agile_ecommerce_tab_left agileinfo_new_products_grid1">
-											<div class="hs-wrapper hs-wrapper1">
-												<img src="{% static 'images/37.jpg' %}" alt=" " class="img-responsive" />
-												<div class="w3_hs_bottom w3_hs_bottom_sub">
-													<ul>
-														<li>
-															<a href="#" data-toggle="modal" data-target="#myModal6"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<h5><a href="single.html">Induction Stove</a></h5>
-											<div class="simpleCart_shelfItem">
-												<p><span>$280</span> <i class="item_price">$250</i></p>
-												<form action="#" method="post">
-													<input type="hidden" name="cmd" value="_cart">
-													<input type="hidden" name="add" value="1"> 
-													<input type="hidden" name="w3ls_item" value="Induction Stove"> 
-													<input type="hidden" name="amount" value="250.00">   
-													<button type="submit" class="w3ls-cart">Add to cart</button>
-												</form>
-											</div>
-										</div>
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
 
 	<div class="mob-show new-products">
 		<div class="container">
@@ -568,8 +232,14 @@
 	<div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -610,8 +280,14 @@
 	<div class="modal video-modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -652,8 +328,14 @@
 	<div class="modal video-modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -694,8 +376,14 @@
 	<div class="modal video-modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -839,8 +527,14 @@
 	<div class="modal video-modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -872,8 +566,14 @@
 	<div class="modal video-modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -905,8 +605,14 @@
 	<div class="modal video-modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -938,8 +644,14 @@
 	<div class="modal video-modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -1073,8 +785,14 @@
 	<div class="modal video-modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -1106,8 +824,14 @@
 	<div class="modal video-modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -1139,8 +863,14 @@
 	<div class="modal video-modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -1172,8 +902,14 @@
 	<div class="modal video-modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModal1">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-				<div class="modal-header" style="padding: 0;">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem;"><span aria-hidden="true">&times;</span></button>	
+				<div class="modal-header mic-rel" style="padding: 0 0 10px;">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding: 1rem 2rem 1.5rem;"><span aria-hidden="true">&times;</span></button>
+					<form action="#" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
+					</form>
+					<form action="mic" id="mic_form">
+						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
+					</form>
 				</div>
 				<section>
 					<div class="modal-body">
@@ -1439,6 +1175,7 @@
 	<!-- //newsletter -->
 
 	<!-- footer -->
+
 	<div class="footer" id="footer-scroll">
 		<div class="container">
 			<div class="w3_footer_grids">
@@ -1504,9 +1241,11 @@
 			<a href="#profile-tab" class="scroll"><img src="{% static 'images/arrow.png' %}" alt=" " class="img-responsive" /></a>
 		</div> -->
 
-
 	</div>
+
 	<!-- //footer --> 
+
+	
 	<!-- cart-js -->
 	<script src="{% static 'js/minicart.js' %}"></script>
 	<script>
