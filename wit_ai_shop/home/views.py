@@ -12,7 +12,7 @@ def home(request):
 def mic(request):
     text = wit_speech.RecognizeSpeech('myspeech.wav', 4)
     print(text)
-    
+    return redirect(reverse('home')+ '#deal-href')
 
 def section_id():
     return '#deal-href'
