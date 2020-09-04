@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.urls import reverse
 from wit_files import wit_speech
 
 
@@ -11,4 +12,7 @@ def home(request):
 def mic(request):
     text = wit_speech.RecognizeSpeech('myspeech.wav', 4)
     print(text)
-    return HttpResponse(text)
+    
+
+def section_id():
+    return '#deal-href'
