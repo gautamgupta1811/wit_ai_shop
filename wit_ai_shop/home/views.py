@@ -7,13 +7,10 @@ import json
 # Create your views here.
 
 def home(request):
-    if request.method == 'GET':
-        return render(request, 'index.html')       
+    return render(request, 'index.html')       
 
 def mic(request):
     text = wit_speech.RecognizeSpeech('myspeech.wav', 4)
     print(text)
-    if request.method == 'POST':
-        data = json.dumps({'id':'#deal-href'})
-        return render(request, 'index.html', {'data':data})
-
+    id_href = '#deal-href'
+    return redirect(reverse('home')+ id_href)

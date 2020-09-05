@@ -6,7 +6,7 @@ from wit_files.Recorder import record_audio, read_audio
 API_ENDPOINT = 'https://api.wit.ai/speech'
 
 # Wit.ai api access token
-wit_access_token = 'U2ELUYGFKBKN2KKKBUUNUPB4MWEJZHAQ'
+wit_access_token = 'XMK3WRWPX4WQJVIBBA7EMGLBH23XXKXL'
 
 
 def RecognizeSpeech(AUDIO_FILENAME, num_seconds = 5):
