@@ -6,7 +6,21 @@ function initEvent() {
 
     mic_pause_btn = document.querySelector("#mic-pause");
     mic_pause_btn.addEventListener("click", hidePlay);
+
+    x = document.querySelector("#audio_tag");
+    document.querySelector("#audioInput").addEventListener('keyup', misunderstand);
 }
+
+
+function misunderstand(obj) {
+    var inputVal = parseInt(obj.value);
+    if(inputVal == 1) {
+        x.play();
+    }
+}
+
+// misunderstand();
+
 
 function hidePause() {
     mic_pause_btn.style.display = "block";
