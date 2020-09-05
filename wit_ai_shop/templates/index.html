@@ -75,9 +75,9 @@
 	<!-- //for bootstrap working -->
 
 	<!-- header -->
-	<div class="header" id="home1">
+	<div class="header" id="home1" id="header_id">
 		<div class="container">
-			
+
 			<div class="w3l_logo">
 				<h1><a href="index.html">Electronic Store<span>Your stores. Your place.</span></a></h1>
 			</div>
@@ -97,12 +97,10 @@
 			</form>
 		</div>
 	</div>
-
-
 	<!-- //header -->
+
 	<!-- navigation -->
-	
-	<nav class="navbar navbar-expand-lg navbar-light" id="bg-nav">
+	<nav class="navbar navbar-expand-lg navbar-light" id="bg-nav" id="nav_id">
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 		  <ul class="navbar-nav mr-auto ml-auto">
 			<!-- <li class="nav-item active">
@@ -117,17 +115,20 @@
 		  </ul>
 		</div>
 	</nav>
-	
 	<!-- //navigation -->
+
 	<!-- banner -->
-	<div class="banner">
+	<div class="banner" id="banner_id">
 		<div class="container">
 			<h3>Mobile, Laptops, Cameras <span>Special Offers</span></h3>
 		</div>
 	</div>
 	<!-- //banner --> 
 
-	<div class="mob-show new-products">
+
+	<!-- mobiles -->
+
+	<div class="mob-show new-products" id="mobiles_id">
 		<div class="container">
 			<h3>Mobiles</h3>
 			<div class="row">
@@ -226,7 +227,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<!-- modal-video -->
 	<div class="modal video-modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModal1">
@@ -422,8 +422,11 @@
 	</div>
 	<!-- //modal-video -->
 
+	<!-- //mobiles -->
 
-	<div class="lap-show new-products">
+	<!-- laptops -->
+
+	<div class="lap-show new-products" id="laptops_id">
 		<div class="container">
 			<h3>Laptops</h3>
 			<div class="row">
@@ -681,7 +684,11 @@
 	</div>
 	<!-- //modal-video -->
 
-	<div class="cam-show new-products">
+	<!-- //laptops -->
+
+	<!-- cameras -->
+
+	<div class="cam-show new-products" id="cameras_id">
 		<div class="container">
 			<h3>Cameras</h3>
 			<div class="row">
@@ -939,12 +946,11 @@
 	</div>
 	<!-- //modal-video -->
 
+	<!-- //cameras -->
 
-	<!-- //banner-bottom -->
 
-
-	<!-- banner-bottom1 -->
-	<div class="banner-bottom1">
+	<!-- hot-deal -->
+	<div class="banner-bottom1" id="hot_deal_id">
 		<div class="agileinfo_banner_bottom1_grids">
 			<div class="col-md-7 agileinfo_banner_bottom1_grid_left">
 				<!-- <h3>Grand Opening Event With flat<span>20% <i>Discount</i></span></h3> -->
@@ -961,9 +967,10 @@
 			<div class="clearfix"> </div>
 		</div>
 	</div>
-	<!-- //banner-bottom1 --> 
+	<!-- //hot-deal --> 
+
 	<!-- special-deals -->
-	<div id='deal-href' class="special-deals">
+	<div id='deal-href' class="special-deals" id="special_deal_id">
 		<div class="container">
 			<h2>Special Deals</h2>
 			<div class="w3agile_special_deals_grids">
@@ -1029,8 +1036,9 @@
 		</div>
 	</div>
 	<!-- //special-deals -->
+
 	<!-- new-products -->
-	<div class="new-products">
+	<div class="new-products" id="new_products_id">
 		<div class="container">
 			<h3>New Products</h3>
 			<div class="agileinfo_new_products_grids">
@@ -1157,7 +1165,7 @@
 	<!-- //new-products -->
 
 	<!-- newsletter -->
-	<div class="newsletter" id="newsletter-scroll">
+	<div class="newsletter" id="newsletter-scroll" id="newsletter_id">
 		<div class="container">
 			<div class="col-md-6 w3agile_newsletter_left">
 				<h3>Newsletter</h3>
@@ -1175,8 +1183,7 @@
 	<!-- //newsletter -->
 
 	<!-- footer -->
-
-	<div class="footer" id="footer-scroll">
+	<div class="footer" id="footer-scroll" id="footer_id">
 		<div class="container">
 			<div class="w3_footer_grids">
 				<div class="col-md-3 w3_footer_grid mr-5">
@@ -1242,10 +1249,8 @@
 		</div> -->
 
 	</div>
-
 	<!-- //footer --> 
 
-	
 	<!-- cart-js -->
 	<script src="{% static 'js/minicart.js' %}"></script>
 	<script>
@@ -1263,9 +1268,6 @@
         });
     </script>
 	<!-- //cart-js -->   
-
-
-
 
 </body>
 </html>
