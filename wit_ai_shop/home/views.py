@@ -11,6 +11,15 @@ def home(request):
 
 def mic(request):
     text = wit_speech.RecognizeSpeech('myspeech.wav', 4)
-    print(text)
-    id_href = '#deal-href'
-    return redirect(reverse('home')+ id_href)
+    id_list = ['new_products_id','laptops_id','mobiles_id','header_id','cameras_id','cart_id', 'special_deal_id']
+    try:
+        entity = text['entities']
+        section = entity['scroll_section:scroll_section'][0]
+        id_ref = section['value']
+        if id_ref in id_list:
+            final_id = "#" + id_ref
+            return redirect(reverse('home')+ final_id)
+        else:
+            return redirect(reverse('home')+'#kuchbhi')
+    except:
+        return redirect(reverse('home')+'#kuchbhi')
