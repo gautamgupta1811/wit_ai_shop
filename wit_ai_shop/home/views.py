@@ -20,6 +20,9 @@ def mic(request):
             final_id = "#" + id_ref
             return redirect(reverse('home')+ final_id)
         else:
-            return redirect(reverse('home')+'#kuchbhi')
+            data = json.dumps({1:2})
+            return render(request, 'index.html', {'data':data})
+            
     except:
-        return redirect(reverse('home')+'#kuchbhi')
+        data = json.dumps({1:2})
+        return render(request, 'index.html', {'data':data})

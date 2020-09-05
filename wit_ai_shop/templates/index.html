@@ -69,7 +69,9 @@
 	#audio_1 {
 		display: block;
 	}
-
+	#audio_tag{
+		display: none;
+	}
 </style>
 
 </head> 
@@ -80,15 +82,9 @@
 
 	<!-- audio -->
 
-	<div id="audio_1">
-		<form action="#" id="audioForm">
-			<input type="text" id="audioInput">
-		</form>
-	
-		<audio id="audio_tag" controls>
-			<source src="../static/audio/try_again.mp3">
-		</audio>
-	</div>
+	<audio id="audio_tag" controls>
+		<source src="{% static 'audio/try_again.mp3' %}">
+	</audio>
 
 	<!-- // audio -->
 
@@ -1259,6 +1255,7 @@
 				</div>
 			</div>
 			<div class="container">
+				<p id="gautam">abc</p>
 				<p>&copy; 2017 Electronic Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 			</div>
 		</div>
@@ -1296,3 +1293,13 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+<script>
+	
+	const data = JSON.parse("{{data|escapejs}}");
+	var datanode = document.getElementById("audio_tag");
+	console.log(data);
+	if(data != null){ 
+		datanode.play();
+		data = null;
+	}
+</script>

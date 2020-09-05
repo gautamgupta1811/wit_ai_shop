@@ -7,14 +7,16 @@ function initEvent() {
     mic_pause_btn = document.querySelector("#mic-pause");
     mic_pause_btn.addEventListener("click", hidePlay);
 
-    x = document.querySelector("#audio_tag");
-    document.querySelector("#audioInput").addEventListener('keyup', misunderstand);
+    var x = document.querySelector("#audio_tag");
+    document.querySelector("#audioInput").addEventListener('blur', misunderstand);
+    console.log("pa")
 }
 
 
 function misunderstand(obj) {
     var inputVal = parseInt(obj.value);
-    if(inputVal == 1) {
+    if(inputVal > 1) {
+        console.log("pp")
         x.play();
     }
 }
