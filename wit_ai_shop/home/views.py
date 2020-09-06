@@ -14,7 +14,6 @@ def mic(request):
     id_list = ['new_products_id','laptops_id','mobiles_id','header_id','cameras_id','special_deal_id']
     try:
         entity = text['entities']
-        print(entity)
         section = entity['scroll_section:scroll_section'][0]
         id_ref = section['value']
         if id_ref in id_list:
@@ -22,16 +21,13 @@ def mic(request):
             return redirect(reverse('home')+ final_id)
 
         elif id_ref == 'cart_id':
-            print("inside elif")
             data1 = json.dumps({1:2})
             return render(request, 'index.html', {'data1':data1})
 
         else:
-            print("inside else")
             data = json.dumps({1:2})
             return render(request, 'index.html', {'data':data})
             
-    except BaseException as err:
-        print(err)
+    except:
         data = json.dumps({1:2})
         return render(request, 'index.html', {'data':data})

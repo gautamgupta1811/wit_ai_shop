@@ -1255,7 +1255,6 @@
 				</div>
 			</div>
 			<div class="container">
-				<p id="gautam">abc</p>
 				<p>&copy; 2017 Electronic Store. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
 			</div>
 		</div>
@@ -1307,11 +1306,17 @@
 <script>
 	var data1 = JSON.parse("{{data1|escapejs}}");
 	var datanode = document.getElementById("cart_id");
-	var daa = document.getElementById("gautam");
 	daa.innerHTML += data1;
 	if(data1 != null){
-		console.log("okay");
 		datanode.classList.toggle("sbmincart-showing");
 
+	}
+</script>
+
+<script>
+	var datanode1 = document.getElementById("cart_id");
+	console.log(datanode1)
+	if(datanode1 != null){
+		datanode1.addEventListener("click", function(){datanode1.classList.toggle("sbmincart-showing",false)})
 	}
 </script>
