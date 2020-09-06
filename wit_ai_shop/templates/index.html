@@ -72,6 +72,19 @@
 	#audio_tag{
 		display: none;
 	}
+	.cart {
+		position: relative;
+	}
+	#cart-close {
+		position: absolute;
+		top: 85px;
+		left: 100px;
+		z-index: 90000;
+		border: none;
+		display: none;
+	}
+
+
 </style>
 
 </head> 
@@ -103,6 +116,7 @@
 					<input type="hidden" name="display" value="1" />
 					<button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
 				</form>   
+				<button id="cart-close">x</button>
 			</div>
 			<form action="#" id="mic_form">
 				<button class="microphone" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
@@ -1306,17 +1320,32 @@
 <script>
 	var data1 = JSON.parse("{{data1|escapejs}}");
 	var datanode = document.getElementById("cart_id");
-	daa.innerHTML += data1;
+	var cart_close = document.getElementById("cart-close");
+	if(data1 != null){
+		console.log("okay");
+		datanode.classList.toggle("sbmincart-showing");
+		cart_close.style.display = "block";
+		cart_close.addEventListener("click", hideCart);
+	}
+	function hideCart() {
+		datanode.classList.remove("sbmincart-showing");
+		cart_close.style.display = "none";
+	}
+</script>
+
+<!-- <script>
+	var data1 = JSON.parse("{{data1|escapejs}}");
+	var datanode = document.getElementById("cart_id");
 	if(data1 != null){
 		datanode.classList.toggle("sbmincart-showing");
 
 	}
-</script>
+</script> -->
 
-<script>
+<!-- <script>
 	var datanode1 = document.getElementById("cart_id");
 	console.log(datanode1)
 	if(datanode1 != null){
 		datanode1.addEventListener("click", function(){datanode1.classList.toggle("sbmincart-showing",false)})
 	}
-</script>
+</script> -->
