@@ -75,7 +75,7 @@
 </style>
 
 </head> 
-<body>
+<body id="cart_id" class=>
 	<!-- for bootstrap working -->
 	<script type="text/javascript" src="{% static 'js/bootstrap-3.1.1.min.js' %}"></script>
 	<!-- //for bootstrap working -->
@@ -1294,12 +1294,24 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 <script>
-	
 	const data = JSON.parse("{{data|escapejs}}");
 	var datanode = document.getElementById("audio_tag");
-	console.log(data);
 	if(data != null){ 
 		datanode.play();
 		data = null;
+	}
+
+	
+</script>
+
+<script>
+	var data1 = JSON.parse("{{data1|escapejs}}");
+	var datanote = document.getElementById("cart_id");
+	var daa = document.getElementById("gautam");
+	daa.innerHTML += data1;
+	if(data1 != null){
+		console.log("okay");
+		datanode.classList.add("sbmincart-showing");
+
 	}
 </script>
