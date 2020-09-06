@@ -1306,12 +1306,12 @@
 
 <script>
 	var data1 = JSON.parse("{{data1|escapejs}}");
-	var datanote = document.getElementById("cart_id");
+	var datanode = document.getElementById("cart_id");
 	var daa = document.getElementById("gautam");
 	daa.innerHTML += data1;
 	if(data1 != null){
 		console.log("okay");
-		datanode.classList.add("sbmincart-showing");
+		datanode.classList.toggle("sbmincart-showing");
 
 	}
 </script>
