@@ -266,7 +266,10 @@
 					<form action="#" id="mic_form">
 						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
 					</form>
-					<form action="mic" id="mic_form">
+					<form action="mic_con" id="mic_form" method="POST">
+						{% csrf_token %}
+						<input type="hidden" name="cat" value="mobile">
+						<input type="hidden" name="item" value="OPPO A9">
 						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
 					</form>
 				</div>
@@ -305,7 +308,10 @@
 					<form action="#" id="mic_form">
 						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
 					</form>
-					<form action="mic" id="mic_form">
+					<form action="mic_con" id="mic_form" method="POST">
+						{% csrf_token %}
+						<input type="hidden" name="cat" value="mobile">
+						<input type="hidden" name="item" value="Apple iPhone 11 Pro">
 						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
 					</form>
 				</div>
@@ -390,12 +396,12 @@
 				<section>
 					<div class="modal-body">
 						<div class="col-md-5 modal_body_left">
-							<img src="{% static 'wit_images/m28.jpg' %}" alt=" " class="img-responsive" />
+							<img src="{% static 'wit_images/m28.jpg' %}" alt=" " class="img-responsive">
 						</div>
 						<div class="col-md-7 modal_body_right">
 							<h4>Samsung Note10</h4>
 							<p class="mb-1">Memory, Storage & SIM: 8GB RAM | 128GB internal memory expandable up to 1TB | Dual SIM dual-standby (4G+4G)</p>
-							<p>12MP Ultra wide (123°) FF + F2.2 " Wide (77°) 12MP AF F1.7 Dual Pixel + Tele (45°) 12MP AF F2.4 OIS, 2x Zoom camera | 32MP front facing camera</p>
+							<p>12MP Ultra wide (123°) FF + F2.2  Wide (77°) 12MP AF F1.7 Dual Pixel + Tele (45°) 12MP AF F2.4 OIS, 2x Zoom camera | 32MP front facing camera</p>
 							<div class="modal_body_right_cart simpleCart_shelfItem">
 								<p><span>$570</span> <i class="item_price">$550</i></p>
 								<form action="#" method="post">
@@ -528,7 +534,10 @@
 					<form action="#" id="mic_form">
 						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
 					</form>
-					<form action="mic" id="mic_form">
+					<form action="mic_con" id="mic_form" method="POST">
+						{% csrf_token %}
+						<input type="hidden" name="cat" value="laptop">
+						<input type="hidden" name="item" value="Dell G3 3500">						
 						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
 					</form>
 				</div>
@@ -606,7 +615,7 @@
 					<form action="#" id="mic_form">
 						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
 					</form>
-					<form action="mic" id="mic_form">
+					<form action="#" id="mic_form">
 						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
 					</form>
 				</div>
@@ -645,7 +654,10 @@
 					<form action="#" id="mic_form">
 						<button class="microphone pop-up-mic" id="mic-play"><i class="fa fa-microphone" aria-hidden="true"></i></button>
 					</form>
-					<form action="mic" id="mic_form">
+					<form action="mic_con" id="mic_form" method="POST">
+						{% csrf_token %}
+						<input type="hidden" name="cat" value="laptop">
+						<input type="hidden" name="item" value="Alienware m15(R3)">
 						<button class="microphone pop-up-mic" id="mic-pause"><i class="fa fa-microphone-slash" aria-hidden="true"></i></button>
 					</form>
 				</div>

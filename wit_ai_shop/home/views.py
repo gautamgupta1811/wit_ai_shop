@@ -31,3 +31,8 @@ def mic(request):
     except:
         data = json.dumps({1:2})
         return render(request, 'index.html', {'data':data})
+
+def mic_con(request):
+    cat = request.POST['cat']
+    item = request.POST['item']
+    return HttpResponse(cat+item)
