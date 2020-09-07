@@ -17,6 +17,7 @@ class mobile(models.Model):
     highlights = models.TextField()
 
 class laptop(models.Model):
+    name = models.TextField(max_length=50)
     processor = models.TextField()
     ram = models.TextField()
     hdd = models.TextField()
