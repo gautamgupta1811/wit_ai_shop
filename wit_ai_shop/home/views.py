@@ -1,8 +1,11 @@
+import os
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from wit_files import wit_speech
 import json
+from gtts import gTTS
+import playsound
 
 # Create your views here.
 
@@ -35,4 +38,17 @@ def mic(request):
 def mic_con(request):
     cat = request.POST['cat']
     item = request.POST['item']
+    text = "Beautiful People"
+    message = gTTS(text=text, lang='en', slow=True)
+    message.save("wit_response.mp3")
+    playsound.playsound("wit_response.mp3")
+    os.remove("wit_response.mp3")
+    
     return HttpResponse(cat+item)
+
+
+def  tts(response):
+    text = str(response)
+    message = gTTS(text=text, lang='en', slow=True)
+    message.save("wit_response.mp3")
+    # playsound("wit_response.mp3")
