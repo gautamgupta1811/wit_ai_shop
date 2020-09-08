@@ -68,19 +68,6 @@ def mic_con(request):
         data = json.dumps({1:2})
         return render(request, 'view.html', {'data':data}) 
 
-
-
-    #message = gTTS(text=text, lang='en', slow=True)
-    # message.save("wit_response.mp3")
-    # playsound.playsound("wit_response.mp3")
-    # os.remove("wit_response.mp3")
-    return render(request, 'view.html')
-
 def product(request):
     return render(request, 'view.html')
 
-def  tts(response):
-    text = str(response)
-    message = gTTS(text=text, lang='en', slow=True)
-    message.save("wit_response.mp3")
-    # playsound("wit_response.mp3")
