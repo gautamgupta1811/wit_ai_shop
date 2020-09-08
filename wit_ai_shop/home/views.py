@@ -4,11 +4,9 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from wit_files import wit_speech
 import json
-from django.core.files.base import ContentFile
 from gtts import gTTS
 import playsound
 from django.db import connection
-from django.core.files.storage import default_storage
 
 # Create your views here.
 
@@ -29,7 +27,6 @@ def mic(request):
         elif id_ref == 'cart_id':
             data1 = json.dumps({1:2})
             return render(request, 'index.html', {'data1':data1})
-
         else:
             data = json.dumps({1:2})
             return render(request, 'index.html', {'data':data})
@@ -43,20 +40,16 @@ def mic_con(request):
     item = request.POST['item']
     try:
         text = wit_speech.RecognizeSpeech('myspeech.wav', 4)
-        print(text)
         entity = text['entities']
         section = entity['mobile_query:mobile_query'][0]
         column = section['value']
         column = str(column)
-        print(column)
         cursor = connection.cursor()
-        query = 'select memory from home_mobile where name = "OPPO A9"'
-        # print(query, [column, cat, item])
+        query = f'select {column} from home_{cat} where name = "{item}"'
         cursor.execute(query)
         rows = cursor.fetchone()
         if rows:
-            print(rows)
-            message = gTTS(text=rows[0], lang='en', slow=True)
+            message = gTTS(text=rows[0], lang='en', slow=False)
             message.save("wit_response.mp3")
             playsound.playsound("wit_response.mp3")
             return render(request, 'view.html')
