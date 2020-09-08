@@ -50,7 +50,7 @@ def mic_con(request):
         column = str(column)
         print(column)
         cursor = connection.cursor()
-        query = f'select memory from home_mobile where name = "OPPO A9"'
+        query = 'select memory from home_mobile where name = "OPPO A9"'
         # print(query, [column, cat, item])
         cursor.execute(query)
         rows = cursor.fetchone()
