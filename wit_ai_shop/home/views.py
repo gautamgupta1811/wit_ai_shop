@@ -10,7 +10,7 @@ import playsound
 # Create your views here.
 
 def home(request):
-    return render(request, 'index.html')       
+    return render(request, 'view.html')       
 
 def mic(request):
     text = wit_speech.RecognizeSpeech('myspeech.wav', 4)
