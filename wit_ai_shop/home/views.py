@@ -4,13 +4,16 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from wit_files import wit_speech
 import json
+from django.core.files.base import ContentFile
 from gtts import gTTS
 import playsound
+from django.db import connection
+from django.core.files.storage import default_storage
 
 # Create your views here.
 
 def home(request):
-    return render(request, 'view.html')       
+    return render(request, 'index.html')       
 
 def mic(request):
     text = wit_speech.RecognizeSpeech('myspeech.wav', 4)
@@ -38,14 +41,43 @@ def mic(request):
 def mic_con(request):
     cat = request.POST['cat']
     item = request.POST['item']
-    text = "Beautiful People"
-    message = gTTS(text=text, lang='en', slow=True)
-    message.save("wit_response.mp3")
-    playsound.playsound("wit_response.mp3")
-    os.remove("wit_response.mp3")
-    
-    return HttpResponse(cat+item)
+    try:
+        text = wit_speech.RecognizeSpeech('myspeech.wav', 4)
+        print(text)
+        entity = text['entities']
+        section = entity['mobile_query:mobile_query'][0]
+        column = section['value']
+        cursor = connection.cursor()
+        query = f'select {column} from home_{cat} where name = "{item}";'
+        print(query)
+        cursor.execute(query)
+        rows = cursor.fetchone()
+        if rows:
+            message = gTTS(text=text, lang='en', slow=True)
+            message.save("wit_response.mp3")
+            playsound.playsound("wit_response.mp3")
+            path = default_storage.save('../', ContentFile(b'wit_reponse.mp3'))
+            default_storage.delete(path)
+            return render(request, 'view.html')
+        else:
+            data = json.dumps({1:2})
+            return render(request, 'view.html', {'data':data})
+        
+    except BaseException as err:
+        print(err)
+        data = json.dumps({1:2})
+        return render(request, 'view.html', {'data':data}) 
 
+
+
+    #message = gTTS(text=text, lang='en', slow=True)
+    # message.save("wit_response.mp3")
+    # playsound.playsound("wit_response.mp3")
+    # os.remove("wit_response.mp3")
+    return render(request, 'view.html')
+
+def product(request):
+    return render(request, 'view.html')
 
 def  tts(response):
     text = str(response)
