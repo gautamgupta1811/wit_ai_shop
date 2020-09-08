@@ -47,24 +47,24 @@ def mic_con(request):
         entity = text['entities']
         section = entity['mobile_query:mobile_query'][0]
         column = section['value']
+        column = str(column)
+        print(column)
         cursor = connection.cursor()
-        query = f'select {column} from home_{cat} where name = "{item}";'
-        print(query)
+        query = f'select memory from home_mobile where name = "OPPO A9"'
+        # print(query, [column, cat, item])
         cursor.execute(query)
         rows = cursor.fetchone()
         if rows:
-            message = gTTS(text=text, lang='en', slow=True)
+            print(rows)
+            message = gTTS(text=rows[0], lang='en', slow=True)
             message.save("wit_response.mp3")
             playsound.playsound("wit_response.mp3")
-            path = default_storage.save('../', ContentFile(b'wit_reponse.mp3'))
-            default_storage.delete(path)
             return render(request, 'view.html')
         else:
             data = json.dumps({1:2})
             return render(request, 'view.html', {'data':data})
         
-    except BaseException as err:
-        print(err)
+    except:
         data = json.dumps({1:2})
         return render(request, 'view.html', {'data':data}) 
 
