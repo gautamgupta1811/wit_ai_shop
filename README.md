@@ -6,5 +6,5 @@ This is a voice based shopping application developed for Wit.ai Hackathon organi
 2. HTML, CSS, JS, JQuery  
 3. Wit.ai  
 
-###### Check it out at:  
+#### Check it out at:  
 [![Video](https://img.youtube.com/vi/ibL18OK9zqo/0.jpg)](https://www.youtube.com/watch?v=ibL18OK9zqo)
